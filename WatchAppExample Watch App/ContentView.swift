@@ -39,6 +39,13 @@ struct ContentView: View {
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return path[0]
     }
+    
+    func delete(offsets: IndexSet) {
+        withAnimation {
+            notes.remove(atOffsets: offsets)
+            save()
+        }
+    }
 
     var body: some View {
         VStack {
@@ -65,17 +72,24 @@ struct ContentView: View {
             
             Spacer()
             
-            List {
-                ForEach(0..<notes.count, id: \.self) { i in
-                    HStack {
-                        Capsule()
-                            .frame(width: 4)
-                            .foregroundColor(.accentColor)
-                        Text(notes[i].text)
-                            .lineLimit(1)
-                            .padding(.leading, 5)
+            if notes.count > 0 {
+                List {
+                    ForEach(0..<notes.count, id: \.self) { i in
+                        HStack {
+                            Capsule()
+                                .frame(width: 4)
+                                .foregroundColor(.accentColor)
+                            Text(notes[i].text)
+                                .lineLimit(1)
+                                .padding(.leading, 5)
+                        }
                     }
+                    .onDelete(perform: delete)
                 }
+            } else {
+                Spacer()
+                Text("Empty")
+                Spacer()
             }
         }
         .navigationTitle("Notes")
