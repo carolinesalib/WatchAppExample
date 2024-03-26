@@ -16,6 +16,7 @@
 		DD7017AC2BAC80A100A681FF /* WatchAppExample_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017AB2BAC80A100A681FF /* WatchAppExample_Watch_AppUITests.swift */; };
 		DD7017AE2BAC80A100A681FF /* WatchAppExample_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017AD2BAC80A100A681FF /* WatchAppExample_Watch_AppUITestsLaunchTests.swift */; };
 		DD7017C22BAE749200A681FF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017C12BAE749200A681FF /* Note.swift */; };
+		DD7017C42BB302C000A681FF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017C32BB302C000A681FF /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		DD7017AB2BAC80A100A681FF /* WatchAppExample_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppExample_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		DD7017AD2BAC80A100A681FF /* WatchAppExample_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppExample_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DD7017C12BAE749200A681FF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		DD7017C32BB302C000A681FF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		DD7017C02BAE747400A681FF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD7017C32BB302C000A681FF /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7017932BAC80A000A681FF /* ContentView.swift in Sources */,
+				DD7017C42BB302C000A681FF /* DetailView.swift in Sources */,
 				DD7017912BAC80A000A681FF /* WatchAppExampleApp.swift in Sources */,
 				DD7017C22BAE749200A681FF /* Note.swift in Sources */,
 			);

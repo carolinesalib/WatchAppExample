@@ -48,54 +48,58 @@ struct ContentView: View {
     }
 
     var body: some View {
-        VStack {
-            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, content: {
-                TextField("Add New Note", text: $text)
-                
-                Button {
-                    guard text.isEmpty == false else { return }
-                    let note = Note(id: UUID(), text: text)
+        NavigationView {
+            VStack {
+                HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, content: {
+                    TextField("Add New Note", text: $text)
                     
-                    notes.append(note)
-                    
-                    text = ""
-                    
-                    save()
-                } label: {
-                    Image(systemName: "plus.circle")
-                        .font(.system(size: 45, weight: .semibold))
-                }
-                .fixedSize()
-                .buttonStyle(PlainButtonStyle())
-                .foregroundColor(.accentColor)
-            })
-            
-            Spacer()
-            
-            if notes.count > 0 {
-                List {
-                    ForEach(0..<notes.count, id: \.self) { i in
-                        HStack {
-                            Capsule()
-                                .frame(width: 4)
-                                .foregroundColor(.accentColor)
-                            Text(notes[i].text)
-                                .lineLimit(1)
-                                .padding(.leading, 5)
-                        }
+                    Button {
+                        guard text.isEmpty == false else { return }
+                        let note = Note(id: UUID(), text: text)
+                        
+                        notes.append(note)
+                        
+                        text = ""
+                        
+                        save()
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 45, weight: .semibold))
                     }
-                    .onDelete(perform: delete)
+                    .fixedSize()
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.accentColor)
+                })
+                
+                Spacer()
+                
+                if notes.count > 0 {
+                    List {
+                        ForEach(0..<notes.count, id: \.self) { i in
+                            NavigationLink(destination: DetailView(note: notes[i], count: notes.count, index: i)) {
+                                HStack {
+                                    Capsule()
+                                        .frame(width: 4)
+                                        .foregroundColor(.accentColor)
+                                    Text(notes[i].text)
+                                        .lineLimit(1)
+                                        .padding(.leading, 5)
+                                }
+                            }
+                        }
+                        .onDelete(perform: delete)
+                    }
+                } else {
+                    Spacer()
+                    Text("Empty")
+                    Spacer()
                 }
-            } else {
-                Spacer()
-                Text("Empty")
-                Spacer()
             }
+            .navigationTitle("Notes")
+            .onAppear(perform: {
+                load()
+            })
         }
-        .navigationTitle("Notes")
-        .onAppear(perform: {
-            load()
-        })
     }
 }
 
