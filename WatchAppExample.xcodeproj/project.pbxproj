@@ -19,6 +19,7 @@
 		DD7017C42BB302C000A681FF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017C32BB302C000A681FF /* DetailView.swift */; };
 		DD7017C62BB87C0F00A681FF /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017C52BB87C0F00A681FF /* CreditsView.swift */; };
 		DD7017C92BB87D0300A681FF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017C82BB87D0300A681FF /* HeaderView.swift */; };
+		DD7017CB2BB8863D00A681FF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017CA2BB8863D00A681FF /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		DD7017C32BB302C000A681FF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DD7017C52BB87C0F00A681FF /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		DD7017C82BB87D0300A681FF /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		DD7017CA2BB8863D00A681FF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			children = (
 				DD7017C32BB302C000A681FF /* DetailView.swift */,
 				DD7017C52BB87C0F00A681FF /* CreditsView.swift */,
+				DD7017CA2BB8863D00A681FF /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD7017CB2BB8863D00A681FF /* SettingsView.swift in Sources */,
 				DD7017932BAC80A000A681FF /* ContentView.swift in Sources */,
 				DD7017C92BB87D0300A681FF /* HeaderView.swift in Sources */,
 				DD7017C42BB302C000A681FF /* DetailView.swift in Sources */,
