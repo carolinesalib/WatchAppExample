@@ -17,6 +17,8 @@
 		DD7017AE2BAC80A100A681FF /* WatchAppExample_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017AD2BAC80A100A681FF /* WatchAppExample_Watch_AppUITestsLaunchTests.swift */; };
 		DD7017C22BAE749200A681FF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017C12BAE749200A681FF /* Note.swift */; };
 		DD7017C42BB302C000A681FF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017C32BB302C000A681FF /* DetailView.swift */; };
+		DD7017C62BB87C0F00A681FF /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017C52BB87C0F00A681FF /* CreditsView.swift */; };
+		DD7017C92BB87D0300A681FF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7017C82BB87D0300A681FF /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		DD7017AD2BAC80A100A681FF /* WatchAppExample_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppExample_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DD7017C12BAE749200A681FF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		DD7017C32BB302C000A681FF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DD7017C52BB87C0F00A681FF /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		DD7017C82BB87D0300A681FF /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 		DD70178F2BAC80A000A681FF /* WatchAppExample Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				DD7017C72BB87CEA00A681FF /* Component */,
 				DD7017C02BAE747400A681FF /* View */,
 				DD7017BF2BAE746800A681FF /* Model */,
 				DD7017902BAC80A000A681FF /* WatchAppExampleApp.swift */,
@@ -169,8 +174,17 @@
 			isa = PBXGroup;
 			children = (
 				DD7017C32BB302C000A681FF /* DetailView.swift */,
+				DD7017C52BB87C0F00A681FF /* CreditsView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DD7017C72BB87CEA00A681FF /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				DD7017C82BB87D0300A681FF /* HeaderView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,8 +346,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7017932BAC80A000A681FF /* ContentView.swift in Sources */,
+				DD7017C92BB87D0300A681FF /* HeaderView.swift in Sources */,
 				DD7017C42BB302C000A681FF /* DetailView.swift in Sources */,
 				DD7017912BAC80A000A681FF /* WatchAppExampleApp.swift in Sources */,
+				DD7017C62BB87C0F00A681FF /* CreditsView.swift in Sources */,
 				DD7017C22BAE749200A681FF /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
